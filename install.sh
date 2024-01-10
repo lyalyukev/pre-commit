@@ -12,7 +12,7 @@ if [ -d .git ]; then
     make build
 
     # Download git pre-commit hook
-    wget -P .git/hooks https://raw.githubusercontent.com/lyalyukev/precommit/main/pre-commit
+    wget -P .git/hooks https://raw.githubusercontent.com/lyalyukev/pre-commit/main/pre-commit
 
     # Make hook executable
     chmod +x .git/hooks/pre-commit
