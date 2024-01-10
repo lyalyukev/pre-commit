@@ -8,8 +8,12 @@ if [ -d .git ]; then
     # Add submodule to .gitignore    
     echo /gitleaks > .gitignore
 
+    cd gitleaks || exit
+
     # Build binary file gitleaks for our os and arch
     make build
+
+    cd .. || exit
 
     # Download git pre-commit hook
     wget -P .git/hooks https://raw.githubusercontent.com/lyalyukev/pre-commit/main/pre-commit
