@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ $(git config --local --get gitleaks.enable) == "true" ]]; then
+    ./gitleaks/gitleaks detect
+else
+    echo "gitleaks.enable is not set"
+fi
