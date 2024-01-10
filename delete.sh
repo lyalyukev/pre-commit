@@ -4,4 +4,6 @@ rm -r gitleaks
 
 rm .git/hooks/pre-commit
 
-grep -v '/gitleaks' .gitignore > temp_gitignore && mv temp_gitignore .gitignore
+sed -i '/\/gitleaks/d' .gitignore
+
+git config -f .gitmodules --remove-section submodule.gitleaks
