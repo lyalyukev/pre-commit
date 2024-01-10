@@ -3,7 +3,7 @@
 if [ -d .git ]; then
     
     # Download Gitleaks as submodule
-    git submodule add https://github.com/zricethezav/gitleaks.git gitleaks
+    git submodule add https://github.com/zricethezav/gitleaks.git gitleaks --force
     
     # Add submodule to .gitignore    
     echo /gitleaks > .gitignore
